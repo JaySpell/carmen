@@ -2,17 +2,14 @@
 FROM python
 
 # Setup directory 
-RUN mkdir -p /app/carmen/
-WORKDIR /app/carmen/
+RUN mkdir -p /app
+WORKDIR /app
 
 # Pull git project
 RUN git clone https://github.com/JaySpell/carmen.git
 
 # Copy requirements and run install
-RUN pip install --requirement requirements.txt
-
-# Execute script
-RUN bash setup.sh
+RUN pip install --requirement /app/carmen/requirements.txt
 
 # Execute code
-CMD python /app/carmen.py
+CMD python /app/carmen/carmen.py
