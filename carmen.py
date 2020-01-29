@@ -11,9 +11,9 @@ def hello():
 
 def where_in_the_world():
     ip_info = ""
-    r = requests.get('https://api.github.com/user')
+    r = requests.get('https://ipinfo.io/json')
     ip_info = r.json()
     return ip_info
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
