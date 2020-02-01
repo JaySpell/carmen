@@ -16,17 +16,18 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col`">
                <img src="{{url_for('static', filename='carmen.png')}}">
             </div>
-            <div class="col">
-                <div class="alert alert-danger" role="alert">
-                    <h4 class="alert-heading">Hello Carmen!</h4>
-                    <p>I see that you are in {{city}}!!!  You can't escape!!!</p>
-                    <hr>
-                </div>
+        </div>
+        <div class="row">
+            <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Hello Carmen!</h4>
+                <p>I see that you are in {{city}}!!!  You can't escape!!!</p>
+                <hr>
             </div>
-    
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
