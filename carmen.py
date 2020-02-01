@@ -10,10 +10,10 @@ def hello():
     return find_me
 
 def where_in_the_world():
-    ip_info = ""
+    city_info = ""
     r = requests.get('https://ipinfo.io/json')
-    ip_info = r.json()
-    return ip_info
+    city_info = r.json()['city']
+    return city_info
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

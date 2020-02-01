@@ -13,6 +13,7 @@ RUN npm install popper.js jquery
 RUN npm install bootstrap
 
 # Pull git project
+WORKDIR /app
 RUN git clone https://github.com/JaySpell/carmen.git
 
 # Copy requirements and run install
